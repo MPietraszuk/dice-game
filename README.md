@@ -14,4 +14,4 @@ One player will roll the dice. You can hold or roll again. The caveat is, if you
 
 📌 **Live Game, have Fun**
 
-- [The Dice Game](https://guess-that-number.web.app)
+- [The Dice Game](https://dice-game-fc0af.web.app)

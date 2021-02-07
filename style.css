@@ -184,7 +184,8 @@ p{
 footer {
   position:absolute;
   left: center;
-  top: 80rem;
+  /* top: 75rem; */
+  top: 92%;
   display: block;
   color: #fff;
 }
