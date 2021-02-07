@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   margin: 0;
@@ -168,4 +169,22 @@ main {
 
 .hidden {
   display: none;
+}
+/* Footer */
+.color{
+  color:#e25555;
+}
+.coffee {
+  color: #2f2f2f;
+}
+p{ 
+  font-family: 'Roboto',
+  sans-serif;
+}
+footer {
+  position:absolute;
+  left: center;
+  top: 80rem;
+  display: block;
+  color: #fff;
 }
