@@ -57,7 +57,10 @@ btnRoll.addEventListener('click', function() {
       currentScore += dice;
       document.getElementById(`current--${activePlayer}`).textContent = currentScore;
     } else {
+      // Rolled 1, initialize active player
       document.getElementById(`score--${activePlayer}`).textContent = 0;
+      scores[activePlayer] = 0;
+      currentScore = 0;
       switchPlayer();
     }
   }
