@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/a71707a89a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -13,6 +14,21 @@
     <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
   </head>
   <body>
+<div class="setting-score">
+  The first to score <input type="number" name="setScore" id="setTargetscore" min="20" max="300" value="100"> wins!
+    <button onclick="Alert.render('You look very pretty today.')" class="btnShowAlert"><img src="imgs/question.svg" alt="faq"></button>
+</div>
+<div id="popUpOverlay"></div>
+<div id="popUpBox">
+  <i class="fas fa-check-circle fa-5x"></i>
+    <div id="box"> 
+      <h1>The Strategy of the Game</h1>
+      <p>
+        One player will roll the dice. You can hold or roll again. The caveat is, if you roll 1 you lose all your points and will be taken back to zero. The first to collect 100 points or whatever target score you pick, wins !!!!</p>
+      <div id="closeModal"></div>
+    </div>
+</div>
+  <div id="targetScore"></div>
     <main>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>

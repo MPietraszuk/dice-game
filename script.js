@@ -11,9 +11,18 @@ const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+const inputTarget = document.getElementById('setTargetscore');
+const targetScore = document.getElementById('targetScore');
+const popUpOverlay = document.getElementById('popUpOverlay');
 
-let scores, currentScore, activePlayer, playing;
+let scores, currentScore, activePlayer, playing, target;
 
+
+inputTarget.addEventListener('input', updateValue);
+function updateValue(e) {
+  target  = targetScore.textContent = e.target.value;
+  console.log(target);
+}
 // Start Conditions
 const init = function() {
   scores = [0, 0];
@@ -73,7 +82,7 @@ btnHold.addEventListener('click', function() {
     document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
     // Check if => 100
-    if(scores[activePlayer] >= 100) {
+    if(scores[activePlayer] >= target) {
       playing = false;
       diceEl.classList.add('hidden');
       document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
@@ -86,3 +95,25 @@ btnHold.addEventListener('click', function() {
 
 // New Game
 btnNew.addEventListener('click', init);
+
+
+// Info Question Mark
+var Alert = new CustomAlert();
+
+function CustomAlert(){
+  this.render = function(){
+      //Show Modal
+      let popUpBox = document.getElementById('popUpBox');
+      popUpBox.style.display = "block";
+      let popUpOverlay = document.getElementById('popUpOverlay');
+      popUpOverlay.style.display = "block";
+      //Close Modal
+      document.getElementById('closeModal').innerHTML = '<button onclick="Alert.ok()">OK</button>';
+      popUpOverlay.addEventListener('click', this.ok);
+  }
+  
+  this.ok = function(){
+    document.getElementById('popUpBox').style.display = "none";
+    document.getElementById('popUpOverlay').style.display = "none";
+  }
+}
