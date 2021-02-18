@@ -67,6 +67,16 @@ main {
 .player--active {
   background-color: rgba(255, 255, 255, 0.4);
 }
+
+.player--active h2::after {
+  content: '\2022';
+  font-size: 47px;
+  position: absolute;
+  color: #731f2e;
+  top: -10px;
+  left: -35px;
+}
+
 .player--active .name {
   font-weight: 700;
 }
